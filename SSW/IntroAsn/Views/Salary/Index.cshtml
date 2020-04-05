@@ -1,0 +1,27 @@
+﻿@model IntroAsn.Models.SalaryResponse
+
+@{
+    ViewBag.Title = "Index";
+}
+ <!--Used to display to the user-->
+
+<h2>Next Year Salary Predictor</h2>
+
+@using (Html.BeginForm())
+{
+    <label>First Name: </label>
+    @Html.TextBoxFor(m => m.firstName) <br>
+
+    <label>Last Name: </label>
+    @Html.TextBoxFor(m => m.lastName) <br>
+
+    <label>Current Salary: </label>
+    @Html.TextBoxFor(m => m.currentSalary) <br>
+
+    @ViewBag.nextYear
+    <br>
+
+    <input type="submit" value="Calculate" />
+}
+
+

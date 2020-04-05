@@ -1,0 +1,26 @@
+﻿@model IntroAsn.Models.BonusResponse
+@{
+    ViewBag.Title = "Index";
+}
+<!--Used to display to the user-->
+
+<h2>Bonus Calculator</h2>
+
+@using (Html.BeginForm())
+{
+    <label>Sales Amount: </label>
+    @Html.TextBoxFor(m => m.salesAmount) <br>
+
+    <input type="submit" value="Calculate" />
+    <br>
+
+    <b>
+        @ViewBag.amount
+    </b>
+    <br>
+    <b>
+        @ViewBag.bonus
+    </b>
+
+}
+

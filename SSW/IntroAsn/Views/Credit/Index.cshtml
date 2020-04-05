@@ -1,0 +1,34 @@
+﻿@model IntroAsn.Models.CreditResponse
+
+@{
+    ViewBag.Title = "Index";
+}
+<!--Used to display-->
+
+<h2>Credit Card Payment Calculator</h2>
+
+@using (Html.BeginForm())
+{
+    <label>Old Balance: </label>
+    @Html.TextBoxFor(m => m.oldBalance) <br>
+
+    <label>Charges: </label>
+    @Html.TextBoxFor(m => m.charges) <br>
+
+    <label>Credits: </label>
+    @Html.TextBoxFor(m => m.credits) <br>
+
+    <label>Finance Charge: </label>
+    @ViewBag.financeBag <br>
+
+    <label>New Balance: </label>
+    @ViewBag.balanceBag <br>
+
+    <label>Min Payment: </label>
+    @ViewBag.minBag <br>
+
+    <input type="submit" value="Calculate" />
+}
+
+
+
